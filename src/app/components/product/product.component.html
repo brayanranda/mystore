@@ -1,0 +1,9 @@
+<figure class="product">
+    <!-- el img viene de img.components.ts -->
+    <app-img [img]="product.image"></app-img>
+    <figcaption>
+        <h1>$ {{product.price}}</h1>
+        <h4>{{product.name}}</h4>
+        <button (click)="onAddToCart()">Add cart</button>
+    </figcaption>
+</figure>
