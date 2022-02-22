@@ -1,0 +1,9 @@
+<!-- load evento nativo de image, para saber si cargo todo de forma correcta -->
+<img class="img-obj img-product" (load)="imgLoaded()" (error)="imgError()"  [src]="img" *ngIf="img; else elseImg">
+<ng-template #elseImg>
+    <!-- <img style="display: block" width="200" src="./assets/images/default-image.jpg" alt="img default"> -->
+    <img class="img-obj img-product"  [src]="imgDefault" alt="img default">
+</ng-template>
+
+<!-- ngDestroy & SetInput -->
+<!-- <h3>{{counter}}</h3> -->

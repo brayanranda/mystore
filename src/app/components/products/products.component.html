@@ -1,0 +1,16 @@
+<p>Carrito:  {{myShoppingCart.length}}</p>
+<p>Total a pagar:  {{total}}</p>
+<!-- pipes -->
+<p>Fecha: {{today | date}}</p>
+<!-- <p>Fecha: {{today | date:'short'}}</p> -->
+<!-- Para saber cuanto tiempo hay entre 2 fechas -->
+<!-- <p>Fecha: {{today | tiemAgo}}</p> -->
+<!-- <p>Fecha: {{today | date:'yyyy...dd...MM'}}</p> -->
+<!-- <p>{{'HoLa CoMo EsTaS'| uppercase}}</p> -->
+<section class="products--grid">
+    <app-product 
+        [product]="product" 
+        *ngFor="let product of products"
+        (addedProduct)="onAddToShoppingCart($event)"
+    ></app-product>    
+</section>
