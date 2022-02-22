@@ -6,19 +6,18 @@ import { Product } from '../../models/product/product.model';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
   
   // Viene desde el padre - Tambn debemos darle un estado inicial
   @Input() product: Product = {
     id: '',
-    name: '',
+    title: '',
     image: '',
     price: 0,
+    description: '',
+    category: '',
   }
 
   // Transmitir al padre el Producto que se esta agregando

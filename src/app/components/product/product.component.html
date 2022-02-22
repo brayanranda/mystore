@@ -2,8 +2,12 @@
     <!-- el img viene de img.components.ts -->
     <app-img [img]="product.image"></app-img>
     <figcaption>
-        <h1>$ {{product.price}}</h1>
-        <h4>{{product.name}}</h4>
+        <!-- <h1>{{product.price | currency:'COP '}}</h1> -->
+        <h1>{{product.price}}</h1>
+        <h4>{{product.title}}</h4>
+        <p appHighLight>{{product.description}}</p>
+        <!-- Nuestro propio pipe "reverse" -->
+        <!-- <h4>{{product.title | reverse}}</h4> -->
         <button (click)="onAddToCart()">Add cart</button>
     </figcaption>
 </figure>
